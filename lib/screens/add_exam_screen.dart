@@ -4,6 +4,8 @@ import '../models/exam.dart';
 import '../services/exam_service.dart';
 
 class AddExamScreen extends StatefulWidget {
+  const AddExamScreen({super.key});
+
   @override
   _AddExamScreenState createState() => _AddExamScreenState();
 }

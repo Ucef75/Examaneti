@@ -9,7 +9,7 @@ class ExamService {
       await _firestore.collection('exams').doc(exam.examId).set(exam.toJson());
     } catch (e) {
       print("Error adding exam: $e");
-      throw e;
+      rethrow;
     }
   }
 }
