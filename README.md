@@ -2,15 +2,19 @@
 
 A new Flutter project.
 
-## Getting Started
+## Git Annexe 
+after cloning the project in your pc 
+-> check if any origin already exist with git remote -v
++ if an origin already exist do : git remote remove origin  
++ if there is no origin : 
+git init 
+git remote add origin https://gitlab.com/examenti_app/examenti_app.git
+(now as that's you r first commit you have to create a sub branch )
+git checkout -b your-new-branch-name
+git add .
+git commit -m "your commit message"
+git push -u origin your-new-branch-name
+-> then directly open the gitlab space in your browser go to the home page of the project and you'll find a notification of a merge request 
+choose me as a reviewer and controler and disable the choice of delete branch after merging 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
