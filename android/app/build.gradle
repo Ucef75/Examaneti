@@ -7,8 +7,7 @@ plugins {
 
 android {
     namespace = "com.mdw.myapp"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 33
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -21,21 +20,33 @@ android {
 
     defaultConfig {
         applicationId = "com.mdw.myapp"
-        minSdkVersion 23 
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdkVersion 23
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
         release {
             signingConfig = signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false // Disable resource shrinking
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.0.2') // Add this line
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-core' // Add this line
+    implementation 'com.google.firebase:firebase-auth' // Add this line if you use Firebase Auth
+    implementation 'com.google.firebase:firebase-firestore' // Add this line if you use Firestore
+    implementation 'com.google.firebase:firebase-storage' // Add this line if you use Firebase Storage
 }
 
 apply plugin: 'com.google.gms.google-services'
