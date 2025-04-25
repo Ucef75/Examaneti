@@ -16,4 +16,6 @@ after cloning the project in your pc
 `git push -u origin your-new-branch-name`  
 -> then directly open the GitLab space in your browser, go to the home page of the project and you'll find a notification of a merge request  
 choose me as a reviewer and controller and disable the choice of delete branch after merging  
--> as first step when start working run this command to update the local project in your pc from the remote repo  
+-> As first step when start working run this command to update the local project in your pc from the remote repo  
+`git pull origin main
+` 
