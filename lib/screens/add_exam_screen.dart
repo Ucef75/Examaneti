@@ -11,21 +11,32 @@ class AddExamScreen extends StatefulWidget {
 }
 
 class _AddExamScreenState extends State<AddExamScreen> {
-  final TextEditingController _classRefController = TextEditingController();
-  final TextEditingController _examNameController = TextEditingController();
-  final TextEditingController _typeController = TextEditingController();
+  final TextEditingController _classIdController = TextEditingController();
+  final TextEditingController _correctionDeadlineController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _examTypeController = TextEditingController();
   final TextEditingController _fileUrlController = TextEditingController();
+  final TextEditingController _dateController = TextEditingController();
+  final TextEditingController _professorIdController = TextEditingController();
+  final TextEditingController _statusController = TextEditingController();
   final TextEditingController _timeLimitController = TextEditingController();
+
   final ExamService _examService = ExamService();
 
   void _submitExam() async {
-    if (_examNameController.text.isEmpty ||
-        _classRefController.text.isEmpty ||
-        _typeController.text.isEmpty ||
+    if (_classIdController.text.isEmpty ||
+        _correctionDeadlineController.text.isEmpty ||
+        _descriptionController.text.isEmpty ||
+        _titleController.text.isEmpty ||
+        _examTypeController.text.isEmpty ||
         _fileUrlController.text.isEmpty ||
+        _dateController.text.isEmpty ||
+        _professorIdController.text.isEmpty ||
+        _statusController.text.isEmpty ||
         _timeLimitController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Please fill all fields")),
+        const SnackBar(content: Text("Please fill all fields")),
       );
       return;
     }
@@ -34,22 +45,27 @@ class _AddExamScreenState extends State<AddExamScreen> {
 
     Exam newExam = Exam(
       examId: examId,
-      classRef: _classRefController.text,
-      examName: _examNameController.text,
-      type: _typeController.text,
+      classId: _classIdController.text,
+      correctionDeadline: _correctionDeadlineController.text,
+      description: _descriptionController.text,
+      title: _titleController.text,
+      examType: _examTypeController.text,
       fileUrl: _fileUrlController.text,
+      date: _dateController.text,
+      professorId: _professorIdController.text,
+      status: _statusController.text,
       timeLimit: int.parse(_timeLimitController.text),
     );
 
     try {
       await _examService.addExam(newExam);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Exam added successfully")),
+        const SnackBar(content: Text("Exam added successfully")),
       );
       Navigator.pop(context);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Failed to add exam")),
+        const SnackBar(content: Text("Failed to add exam")),
       );
     }
   }
@@ -57,38 +73,60 @@ class _AddExamScreenState extends State<AddExamScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Add Exam")),
+      appBar: AppBar(title: const Text("Add Exam")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _classRefController,
-              decoration: InputDecoration(labelText: "Class Reference"),
-            ),
-            TextField(
-              controller: _examNameController,
-              decoration: InputDecoration(labelText: "Exam Name"),
-            ),
-            TextField(
-              controller: _typeController,
-              decoration: InputDecoration(labelText: "Type"),
-            ),
-            TextField(
-              controller: _fileUrlController,
-              decoration: InputDecoration(labelText: "File URL"),
-            ),
-            TextField(
-              controller: _timeLimitController,
-              decoration: InputDecoration(labelText: "Time Limit (minutes)"),
-              keyboardType: TextInputType.number,
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _submitExam,
-              child: Text("Submit"),
-            ),
-          ],
+        child: SingleChildScrollView( // In case the form is long
+          child: Column(
+            children: [
+              TextField(
+                controller: _classIdController,
+                decoration: const InputDecoration(labelText: "Class ID"),
+              ),
+              TextField(
+                controller: _correctionDeadlineController,
+                decoration: const InputDecoration(labelText: "Correction Deadline"),
+              ),
+              TextField(
+                controller: _descriptionController,
+                decoration: const InputDecoration(labelText: "Description"),
+              ),
+              TextField(
+                controller: _titleController,
+                decoration: const InputDecoration(labelText: "Title"),
+              ),
+              TextField(
+                controller: _examTypeController,
+                decoration: const InputDecoration(labelText: "Exam Type"),
+              ),
+              TextField(
+                controller: _fileUrlController,
+                decoration: const InputDecoration(labelText: "File URL"),
+              ),
+              TextField(
+                controller: _dateController,
+                decoration: const InputDecoration(labelText: "Exam Date"),
+              ),
+              TextField(
+                controller: _professorIdController,
+                decoration: const InputDecoration(labelText: "Professor ID"),
+              ),
+              TextField(
+                controller: _statusController,
+                decoration: const InputDecoration(labelText: "Status"),
+              ),
+              TextField(
+                controller: _timeLimitController,
+                decoration: const InputDecoration(labelText: "Time Limit (minutes)"),
+                keyboardType: TextInputType.number,
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _submitExam,
+                child: const Text("Submit"),
+              ),
+            ],
+          ),
         ),
       ),
     );
