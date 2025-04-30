@@ -1,30 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:uuid/uuid.dart';
 import '../models/exam.dart';
 import '../services/exam_service.dart';
 
-class AddExamScreen extends StatefulWidget {
-  const AddExamScreen({super.key});
+class EditExamScreen extends StatefulWidget {
+  final Exam exam; // Pass the existing Exam object to edit
+
+  const EditExamScreen({super.key, required this.exam});
 
   @override
-  _AddExamScreenState createState() => _AddExamScreenState();
+  _EditExamScreenState createState() => _EditExamScreenState();
 }
 
-class _AddExamScreenState extends State<AddExamScreen> {
-  final TextEditingController _classIdController = TextEditingController();
-  final TextEditingController _correctionDeadlineController = TextEditingController();
-  final TextEditingController _descriptionController = TextEditingController();
-  final TextEditingController _titleController = TextEditingController();
-  final TextEditingController _examTypeController = TextEditingController();
-  final TextEditingController _fileUrlController = TextEditingController();
-  final TextEditingController _dateController = TextEditingController();
-  final TextEditingController _professorIdController = TextEditingController();
-  final TextEditingController _statusController = TextEditingController();
-  final TextEditingController _timeLimitController = TextEditingController();
+class _EditExamScreenState extends State<EditExamScreen> {
+  late TextEditingController _classIdController;
+  late TextEditingController _correctionDeadlineController;
+  late TextEditingController _descriptionController;
+  late TextEditingController _titleController;
+  late TextEditingController _examTypeController;
+  late TextEditingController _fileUrlController;
+  late TextEditingController _dateController;
+  late TextEditingController _professorIdController;
+  late TextEditingController _statusController;
+  late TextEditingController _timeLimitController;
 
   final ExamService _examService = ExamService();
 
-  void _submitExam() async {
+  @override
+  void initState() {
+    super.initState();
+    // Initialize controllers with the existing exam values
+    _classIdController = TextEditingController(text: widget.exam.classId);
+    _correctionDeadlineController = TextEditingController(text: widget.exam.correctionDeadline);
+    _descriptionController = TextEditingController(text: widget.exam.description);
+    _titleController = TextEditingController(text: widget.exam.title);
+    _examTypeController = TextEditingController(text: widget.exam.examType);
+    _fileUrlController = TextEditingController(text: widget.exam.fileUrl);
+    _dateController = TextEditingController(text: widget.exam.date);
+    _professorIdController = TextEditingController(text: widget.exam.professorId);
+    _statusController = TextEditingController(text: widget.exam.status);
+    _timeLimitController = TextEditingController(text: widget.exam.timeLimit.toString());
+  }
+
+  @override
+  void dispose() {
+    _classIdController.dispose();
+    _correctionDeadlineController.dispose();
+    _descriptionController.dispose();
+    _titleController.dispose();
+    _examTypeController.dispose();
+    _fileUrlController.dispose();
+    _dateController.dispose();
+    _professorIdController.dispose();
+    _statusController.dispose();
+    _timeLimitController.dispose();
+    super.dispose();
+  }
+
+  void _updateExam() async {
     if (_classIdController.text.isEmpty ||
         _correctionDeadlineController.text.isEmpty ||
         _descriptionController.text.isEmpty ||
@@ -41,10 +73,8 @@ class _AddExamScreenState extends State<AddExamScreen> {
       return;
     }
 
-    String examId = Uuid().v4();
-
-    Exam newExam = Exam(
-      examId: examId,
+    Exam updatedExam = Exam(
+      examId: widget.exam.examId, // Keep the same exam ID
       classId: _classIdController.text,
       correctionDeadline: _correctionDeadlineController.text,
       description: _descriptionController.text,
@@ -58,14 +88,14 @@ class _AddExamScreenState extends State<AddExamScreen> {
     );
 
     try {
-      await _examService.addExam(newExam);
+      await _examService.addExam(updatedExam); // Just overwrite the document with same ID
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Exam added successfully")),
+        const SnackBar(content: Text("Exam updated successfully")),
       );
-      Navigator.pop(context);
+      Navigator.pop(context); // Go back after editing
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Failed to add exam")),
+        const SnackBar(content: Text("Failed to update exam")),
       );
     }
   }
@@ -73,10 +103,10 @@ class _AddExamScreenState extends State<AddExamScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Add Exam")),
+      appBar: AppBar(title: const Text("Edit Exam")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView( // In case the form is long
+        child: SingleChildScrollView(
           child: Column(
             children: [
               TextField(
@@ -122,8 +152,8 @@ class _AddExamScreenState extends State<AddExamScreen> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: _submitExam,
-                child: const Text("Submit"),
+                onPressed: _updateExam,
+                child: const Text("Update"),
               ),
             ],
           ),
