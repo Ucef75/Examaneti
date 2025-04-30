@@ -1,23 +1,7 @@
-import 'package:flutter/foundation.dart';
+import 'package:app/Pages/Home.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'screens/add_exam_screen.dart';
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-        options:const FirebaseOptions(
-            apiKey: "AIzaSyByQ3c2lU6hN0WyJufFOz9M5BEa-wC9VTM",
-            authDomain: "appflutter-2a1e7.firebaseapp.com",
-            projectId: "appflutter-2a1e7",
-            storageBucket: "appflutter-2a1e7.firebasestorage.app",
-            messagingSenderId: "514872078538",
-            appId: "1:514872078538:web:ac0dd6bd44a31f75070433",
-            databaseURL: 'https://myapp-1234.firebaseio.com'));
-  } else {
-    Firebase.initializeApp();
-  }
 
+void main() {
   runApp(const MyApp());
 }
 
@@ -28,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Exam Management',
+      title: 'Home Page',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AddExamScreen(), // Start with the Add Exam screen
+      debugShowCheckedModeBanner: false,
+      home: Homepage()
     );
   }
 }
