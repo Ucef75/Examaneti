@@ -1,0 +1,201 @@
+{
+  "@@locale": "en",
+  "language": "English",
+  "@language": {
+    "description": "The current language"
+  },
+  "examAppTitle": "Exam App",
+  "@examAppTitle": {
+    "description": "Application title"
+  },
+  "welcomeBack": "Welcome back,",
+  "@welcomeBack": {
+    "description": "Welcome message"
+  },
+  "examsCount": "{count} Exams",
+  "@examsCount": {
+    "description": "Total exams count",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingExamsCount": "{count} Upcoming",
+  "@upcomingExamsCount": {
+    "description": "Upcoming exams count",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "scorePercentage": "{percentage}% Score",
+  "@scorePercentage": {
+    "description": "User's average score",
+    "placeholders": {
+      "percentage": {}
+    }
+  },
+  "quickActionsTitle": "Quick Actions",
+  "@quickActionsTitle": {
+    "description": "Quick actions section title"
+  },
+  "startExamButton": "Start Exam",
+  "@startExamButton": {
+    "description": "Button to start an exam"
+  },
+  "resultsButton": "Results",
+  "@resultsButton": {
+    "description": "Button to view results"
+  },
+  "scheduleButton": "Schedule",
+  "@scheduleButton": {
+    "description": "Button to view schedule"
+  },
+  "helpButton": "Help",
+  "@helpButton": {
+    "description": "Button for help"
+  },
+  "upcomingExamsTitle": "Upcoming Exams",
+  "@upcomingExamsTitle": {
+    "description": "Upcoming exams section title"
+  },
+  "examItem": "{subject} on {date} at {time}",
+  "@examItem": {
+    "description": "Upcoming exam details",
+    "placeholders": {
+      "subject": {},
+      "date": {},
+      "time": {}
+    }
+  },
+  "viewAllExamsButton": "View all exams",
+  "@viewAllExamsButton": {
+    "description": "Button to view all exams"
+  },
+  "recentActivityTitle": "Recent Activity",
+  "@recentActivityTitle": {
+    "description": "Recent activity section title"
+  },
+  "examCompleted": "{subject} Exam Completed\nScored {score}%",
+  "@examCompleted": {
+    "description": "Completed exam notification",
+    "placeholders": {
+      "subject": {},
+      "score": {}
+    }
+  },
+  "examReminder": "{subject} Reminder\nExam in {days} days",
+  "@examReminder": {
+    "description": "Exam reminder notification",
+    "placeholders": {
+      "subject": {},
+      "days": {}
+    }
+  },
+  "assignmentSubmitted": "{subject} Assignment\nSubmitted {time}",
+  "@assignmentSubmitted": {
+    "description": "Assignment submission notification",
+    "placeholders": {
+      "subject": {},
+      "time": {}
+    }
+  },
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "Settings screen title"
+  },
+  "accountSettings": "Account Settings",
+  "@accountSettings": {
+    "description": "Account settings section header"
+  },
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "Edit profile option"
+  },
+  "changePassword": "Change Password",
+  "@changePassword": {
+    "description": "Change password option"
+  },
+  "changeEmail": "Change Email",
+  "@changeEmail": {
+    "description": "Change email option"
+  },
+  "appSettings": "App Settings",
+  "@appSettings": {
+    "description": "App settings section header"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language setting"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language option"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Dark mode toggle"
+  },
+  "helpSupport": "Help & Support",
+  "@helpSupport": {
+    "description": "Help and support option"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About app option"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications section header"
+  },
+  "pushNotifications": "Push Notifications",
+  "@pushNotifications": {
+    "description": "Push notifications toggle"
+  },
+  "emailNotifications": "Email Notifications",
+  "@emailNotifications": {
+    "description": "Email notifications toggle"
+  },
+  "dangerZone": "Danger Zone",
+  "@dangerZone": {
+    "description": "Dangerous actions section header"
+  },
+  "deleteAccount": "Delete Account",
+  "@deleteAccount": {
+    "description": "Delete account option"
+  },
+  "results": "Results",
+  "@results": {
+    "description": "Label for results"
+  },
+  "schedule": "Schedule",
+  "@schedule": {
+    "description": "Label for schedule"
+  },
+  "help": "Help",
+  "@help": {
+    "description": "Label for help section"
+  },
+  "upcomingExams": "Upcoming Exams",
+  "@upcomingExams": {
+    "description": "Title for the upcoming exams section"
+  },
+  "mathematics": "Mathematics",
+  "@mathematics": {
+    "description": "Subject name - Mathematics"
+  },
+  "physics": "Physics",
+  "@physics": {
+    "description": "Subject name - Physics"
+  },
+  "chemistry": "Chemistry",
+  "@chemistry": {
+    "description": "Subject name - Chemistry"
+  },
+  "viewAllExams": "View All Exams",
+  "@viewAllExams": {
+    "description": "Button text to view all exams"
+  },
+  "noNewNotifications": "No new notifications",
+  "@noNewNotifications": {
+    "description": "Message shown when there are no new notifications"
+  }
+}

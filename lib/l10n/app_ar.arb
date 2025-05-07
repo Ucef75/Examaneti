@@ -1,0 +1,169 @@
+{
+  "@@locale": "ar",
+  "language": "العربية",
+  "@language": {
+    "description": "اللغة الحالية"
+  },
+  "examAppTitle": "تطبيق الامتحانات",
+  "@examAppTitle": {
+    "description": "عنوان التطبيق"
+  },
+  "welcomeBack": "مرحبًا بعودتك،",
+  "@welcomeBack": {
+    "description": "رسالة ترحيب"
+  },
+  "userName": "محمد علي",
+  "@userName": {
+    "description": "اسم مستخدم افتراضي"
+  },
+  "examsCount": "{count} امتحانات",
+  "@examsCount": {
+    "description": "إجمالي عدد الامتحانات",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingExamsCount": "{count} قادمة",
+  "@upcomingExamsCount": {
+    "description": "عدد الامتحانات القادمة",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "scorePercentage": "{percentage}% النتيجة",
+  "@scorePercentage": {
+    "description": "متوسط نتيجة المستخدم",
+    "placeholders": {
+      "percentage": {}
+    }
+  },
+  "quickActionsTitle": "إجراءات سريعة",
+  "@quickActionsTitle": {
+    "description": "عنوان قسم الإجراءات السريعة"
+  },
+  "startExamButton": "بدء الامتحان",
+  "@startExamButton": {
+    "description": "زر لبدء الامتحان"
+  },
+  "resultsButton": "النتائج",
+  "@resultsButton": {
+    "description": "زر لعرض النتائج"
+  },
+  "scheduleButton": "الجدول",
+  "@scheduleButton": {
+    "description": "زر لعرض الجدول"
+  },
+  "helpButton": "مساعدة",
+  "@helpButton": {
+    "description": "زر للمساعدة"
+  },
+  "upcomingExamsTitle": "الامتحانات القادمة",
+  "@upcomingExamsTitle": {
+    "description": "عنوان قسم الامتحانات القادمة"
+  },
+  "examItem": "{subject} في {date} الساعة {time}",
+  "@examItem": {
+    "description": "تفاصيل الامتحان القادم",
+    "placeholders": {
+      "subject": {},
+      "date": {},
+      "time": {}
+    }
+  },
+  "viewAllExamsButton": "عرض جميع الامتحانات",
+  "@viewAllExamsButton": {
+    "description": "زر لعرض جميع الامتحانات"
+  },
+  "recentActivityTitle": "النشاط الأخير",
+  "@recentActivityTitle": {
+    "description": "عنوان قسم النشاط الأخير"
+  },
+  "examCompleted": "تم الانتهاء من امتحان {subject}\nالنتيجة: {score}%",
+  "@examCompleted": {
+    "description": "إشعار بانتهاء الامتحان",
+    "placeholders": {
+      "subject": {},
+      "score": {}
+    }
+  },
+  "examReminder": "تذكير: {subject}\nالامتحان بعد {days} أيام",
+  "@examReminder": {
+    "description": "إشعار تذكير بالامتحان",
+    "placeholders": {
+      "subject": {},
+      "days": {}
+    }
+  },
+  "assignmentSubmitted": "تم تسليم واجب {subject}\n{time}",
+  "@assignmentSubmitted": {
+    "description": "إشعار بتسليم الواجب",
+    "placeholders": {
+      "subject": {},
+      "time": {}
+    }
+  },
+  "settingsTitle": "الإعدادات",
+  "@settingsTitle": {
+    "description": "عنوان شاشة الإعدادات"
+  },
+  "accountSettings": "إعدادات الحساب",
+  "@accountSettings": {
+    "description": "رأس قسم إعدادات الحساب"
+  },
+  "editProfile": "تعديل الملف الشخصي",
+  "@editProfile": {
+    "description": "خيار تعديل الملف الشخصي"
+  },
+  "changePassword": "تغيير كلمة المرور",
+  "@changePassword": {
+    "description": "خيار تغيير كلمة المرور"
+  },
+  "changeEmail": "تغيير البريد الإلكتروني",
+  "@changeEmail": {
+    "description": "خيار تغيير البريد الإلكتروني"
+  },
+  "appSettings": "إعدادات التطبيق",
+  "@appSettings": {
+    "description": "رأس قسم إعدادات التطبيق"
+  },
+  "language": "اللغة",
+  "@language": {
+    "description": "إعداد اللغة"
+  },
+  "english": "الإنجليزية",
+  "@english": {
+    "description": "خيار اللغة الإنجليزية"
+  },
+  "darkMode": "الوضع المظلم",
+  "@darkMode": {
+    "description": "تبديل الوضع المظلم"
+  },
+  "helpSupport": "المساعدة والدعم",
+  "@helpSupport": {
+    "description": "خيار المساعدة والدعم"
+  },
+  "about": "حول",
+  "@about": {
+    "description": "خيار حول التطبيق"
+  },
+  "notifications": "الإشعارات",
+  "@notifications": {
+    "description": "رأس قسم الإشعارات"
+  },
+  "pushNotifications": "إشعارات الدفع",
+  "@pushNotifications": {
+    "description": "تبديل إشعارات الدفع"
+  },
+  "emailNotifications": "إشعارات البريد الإلكتروني",
+  "@emailNotifications": {
+    "description": "تبديل إشعارات البريد الإلكتروني"
+  },
+  "dangerZone": "منطقة الخطر",
+  "@dangerZone": {
+    "description": "رأس قسم الإجراءات الخطيرة"
+  },
+  "deleteAccount": "حذف الحساب",
+  "@deleteAccount": {
+    "description": "خيار حذف الحساب"
+  }
+}

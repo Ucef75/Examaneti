@@ -1,0 +1,169 @@
+{
+  "@@locale": "fr",
+  "language": "Français",
+  "@language": {
+    "description": "La langue actuelle"
+  },
+  "examAppTitle": "Appli d'Examens",
+  "@examAppTitle": {
+    "description": "Titre de l'application"
+  },
+  "welcomeBack": "Content de vous revoir,",
+  "@welcomeBack": {
+    "description": "Message de bienvenue"
+  },
+  "userName": "Jean Dupont",
+  "@userName": {
+    "description": "Nom d'utilisateur fictif"
+  },
+  "examsCount": "{count} Examens",
+  "@examsCount": {
+    "description": "Nombre total d'examens",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingExamsCount": "{count} À venir",
+  "@upcomingExamsCount": {
+    "description": "Nombre d'examens à venir",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "scorePercentage": "{percentage}% Score",
+  "@scorePercentage": {
+    "description": "Score moyen de l'utilisateur",
+    "placeholders": {
+      "percentage": {}
+    }
+  },
+  "quickActionsTitle": "Actions Rapides",
+  "@quickActionsTitle": {
+    "description": "Titre de la section des actions rapides"
+  },
+  "startExamButton": "Commencer l'examen",
+  "@startExamButton": {
+    "description": "Bouton pour commencer un examen"
+  },
+  "resultsButton": "Résultats",
+  "@resultsButton": {
+    "description": "Bouton pour voir les résultats"
+  },
+  "scheduleButton": "Calendrier",
+  "@scheduleButton": {
+    "description": "Bouton pour voir le calendrier"
+  },
+  "helpButton": "Aide",
+  "@helpButton": {
+    "description": "Bouton pour l'aide"
+  },
+  "upcomingExamsTitle": "Examens à Venir",
+  "@upcomingExamsTitle": {
+    "description": "Titre de la section des examens à venir"
+  },
+  "examItem": "{subject} le {date} à {time}",
+  "@examItem": {
+    "description": "Détails de l'examen à venir",
+    "placeholders": {
+      "subject": {},
+      "date": {},
+      "time": {}
+    }
+  },
+  "viewAllExamsButton": "Voir tous les examens",
+  "@viewAllExamsButton": {
+    "description": "Bouton pour voir tous les examens"
+  },
+  "recentActivityTitle": "Activité Récente",
+  "@recentActivityTitle": {
+    "description": "Titre de la section d'activité récente"
+  },
+  "examCompleted": "Examen de {subject} terminé\nScore : {score}%",
+  "@examCompleted": {
+    "description": "Notification d'examen terminé",
+    "placeholders": {
+      "subject": {},
+      "score": {}
+    }
+  },
+  "examReminder": "Rappel : {subject}\nExamen dans {days} jours",
+  "@examReminder": {
+    "description": "Notification de rappel d'examen",
+    "placeholders": {
+      "subject": {},
+      "days": {}
+    }
+  },
+  "assignmentSubmitted": "Devoir de {subject}\nSoumis {time}",
+  "@assignmentSubmitted": {
+    "description": "Notification de soumission de devoir",
+    "placeholders": {
+      "subject": {},
+      "time": {}
+    }
+  },
+  "settingsTitle": "Paramètres",
+  "@settingsTitle": {
+    "description": "Titre de l'écran des paramètres"
+  },
+  "accountSettings": "Paramètres du compte",
+  "@accountSettings": {
+    "description": "En-tête de la section des paramètres du compte"
+  },
+  "editProfile": "Modifier le profil",
+  "@editProfile": {
+    "description": "Option de modification du profil"
+  },
+  "changePassword": "Changer le mot de passe",
+  "@changePassword": {
+    "description": "Option de changement de mot de passe"
+  },
+  "changeEmail": "Changer l'email",
+  "@changeEmail": {
+    "description": "Option de changement d'email"
+  },
+  "appSettings": "Paramètres de l'application",
+  "@appSettings": {
+    "description": "En-tête de la section des paramètres de l'app"
+  },
+  "language": "Langue",
+  "@language": {
+    "description": "Paramètre de langue"
+  },
+  "english": "Anglais",
+  "@english": {
+    "description": "Option de langue anglaise"
+  },
+  "darkMode": "Mode sombre",
+  "@darkMode": {
+    "description": "Basculer le mode sombre"
+  },
+  "helpSupport": "Aide & Support",
+  "@helpSupport": {
+    "description": "Option d'aide et support"
+  },
+  "about": "À propos",
+  "@about": {
+    "description": "Option À propos"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "En-tête de la section des notifications"
+  },
+  "pushNotifications": "Notifications push",
+  "@pushNotifications": {
+    "description": "Basculer les notifications push"
+  },
+  "emailNotifications": "Notifications par email",
+  "@emailNotifications": {
+    "description": "Basculer les notifications par email"
+  },
+  "dangerZone": "Zone dangereuse",
+  "@dangerZone": {
+    "description": "En-tête de section pour actions dangereuses"
+  },
+  "deleteAccount": "Supprimer le compte",
+  "@deleteAccount": {
+    "description": "Option de suppression de compte"
+  }
+}
